@@ -1,4 +1,4 @@
-{
+export default () => {
   let foo: any;
   let bar: unknown;
 
@@ -8,9 +8,9 @@
   bar = 4;
   bar = "World";
 
-  foo.print();
-  // bar.print();
+  foo.print(); // Runtime error
+  //bar.print();
 
   console.log(foo + 10);
-  // console.log(bar + 11);
-}
+  //console.log(bar + 11);
+};
