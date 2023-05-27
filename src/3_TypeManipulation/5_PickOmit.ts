@@ -13,6 +13,9 @@ export default () => {
     title: string;
     postedOn: Date;
   };
+  const badPostPreview: BadPostPreview = { title: "", postedOn: new Date() };
+  console.log("badPostPreview", badPostPreview);
+  //                            ^?
 
   type PostPreview = Pick<Post, "title" | "postedOn">;
 
