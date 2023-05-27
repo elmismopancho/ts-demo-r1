@@ -28,6 +28,7 @@ export default () => {
     };
   }
   const olderMe = birthday(me);
+  //              ^?
   console.log("Birthday", olderMe);
   //                      ^?
 };

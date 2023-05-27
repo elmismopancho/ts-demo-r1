@@ -1,14 +1,14 @@
 export default () => {
   // instanceof
-  let bar: any;
-  bar = [1, 2, 3];
-  if (bar instanceof Array) {
-    console.log(bar.length);
+  let foo: any;
+  foo = [1, 2, 3];
+  if (foo instanceof Array) {
+    console.log(foo.length);
     //          ^?
   }
-  bar = new Date(2023, 1, 10);
-  if (bar instanceof Date) {
-    console.log(bar.getTime());
+  foo = new Date(2023, 1, 10);
+  if (foo instanceof Date) {
+    console.log(foo.getTime());
     //          ^?
   }
 
@@ -22,6 +22,7 @@ export default () => {
     }
   }
 
+  let bar: any;
   bar = new Person("Francisco");
   if (bar instanceof Person) {
     console.log(bar.name);
