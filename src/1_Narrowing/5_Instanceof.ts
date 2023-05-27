@@ -12,6 +12,8 @@ export default () => {
     //          ^?
   }
 
+  //--------------------
+
   class Person {
     name: string;
 

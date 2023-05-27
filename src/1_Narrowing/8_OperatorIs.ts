@@ -8,8 +8,8 @@ export default () => {
     meows: () => void;
   };
 
-  // // This doesn't works
-  // function call(animal: unknown) {
+  // // instanceOf doesn't work on Types
+  // function badCall(animal: unknown) {
   //   if (animal instanceof Dog) {
   //     animal.barks();
   //   }
@@ -35,8 +35,14 @@ export default () => {
       animal.meows();
       // ^?
     }
+    console.log(animal);
+    //          ^?
   }
 
-  call({ barks: () => console.log("🐶") });
-  call({ meows: () => console.log("🐱") });
+  call({ barks: () => console.log("Dog", "🐶") });
+  call({ meows: () => console.log("Cat", "🐱") });
+  call({
+    barks: () => console.log("Catdog barks", "🐶🐱"),
+    meows: () => console.log("Catdog meows", "🐱🐶"),
+  });
 };
