@@ -18,6 +18,7 @@ export default () => {
   ];
 
   type Human = (typeof MyArray)[number];
-  let bar: Human;
-  //  ^?
+  const bar: Human = { name: "John", age: 25 };
+  console.log(bar);
+  //          ^?
 };
