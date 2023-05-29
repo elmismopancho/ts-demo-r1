@@ -1,15 +1,18 @@
 export default () => {
   let foo: any;
-  let bar: unknown;
 
   foo = 3;
   foo = "Hello";
+  console.log(foo);
+  //          ^?
+
+  let bar: unknown;
 
   bar = 4;
   bar = "World";
 
   foo.print(); // Runtime error
-  //bar.print();
+  // bar.print();
 
   console.log(foo + 10);
   //console.log(bar + 11);
