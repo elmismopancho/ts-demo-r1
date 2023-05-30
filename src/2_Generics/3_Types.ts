@@ -17,6 +17,12 @@ export default () => {
     bucket.setData(data + 10);
   }
 
-  manageStringBucket({ setData: (_: string) => {}, getData: () => "" });
-  manageNumberBucket({ setData: (_: number) => {}, getData: () => 0 });
+  manageStringBucket({
+    setData: (_: string) => {},
+    getData: () => "",
+  });
+  manageNumberBucket({
+    setData: (_: number) => {},
+    getData: () => 0,
+  });
 };

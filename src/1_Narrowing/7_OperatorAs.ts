@@ -11,7 +11,7 @@ export default () => {
   //    ^?
   const forcedString = stringVar as string;
   //    ^?
-  console.log(forcedString.charAt(2));
+  console.log("forcedString", forcedString.charAt(2));
 
   const numberVar = randomType(100);
   //    ^?
@@ -19,4 +19,12 @@ export default () => {
   //    ^?
   console.log("forcedNumber", Math.sqrt(forcedNumber));
   console.log("numberVar", numberVar);
+
+  //--------------------
+
+  function printUppercase(msg: any) {
+    const forceStr = msg as string;
+    console.log(forceStr.toLocaleUpperCase());
+  }
+  printUppercase(10);
 };

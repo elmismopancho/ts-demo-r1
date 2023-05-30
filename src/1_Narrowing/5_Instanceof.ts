@@ -28,4 +28,17 @@ export default () => {
     console.log(bar.name);
     //          ^?
   }
+
+  type Human = {
+    name: string;
+  };
+
+  function human(name: string): Human {
+    return { name };
+  }
+  bar = human("Francisco");
+  if (bar instanceof Human) {
+    console.log(bar);
+    //          ^?
+  }
 };

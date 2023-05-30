@@ -4,8 +4,10 @@ export default () => {
     title: string;
     description: string;
   };
+  type PartialTodo = Partial<Todo>;
+  //   ^?
 
-  function update(todo: Partial<Todo>) {
+  function update(todo: PartialTodo) {
     console.log(todo);
     //          ^?
   }
@@ -23,7 +25,10 @@ export default () => {
     duns?: string;
   };
 
-  function create(company: Required<Company>) {
+  type RequiredCompany = Required<Company>;
+  //   ^?
+
+  function create(company: RequiredCompany) {
     console.log(company.dot, company.mc, company.duns);
   }
   create({

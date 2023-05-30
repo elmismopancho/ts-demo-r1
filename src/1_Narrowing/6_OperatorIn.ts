@@ -38,9 +38,8 @@ export default () => {
     // try with unknown
     if ("message" in err) {
       console.log(err.message);
-      //          ^?
+      //              ^?
       console.log(err.message());
-      //          ^?
     }
   }
   error({ message: "test" });

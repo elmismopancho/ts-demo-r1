@@ -6,7 +6,7 @@ export default () => {
   //   ^?
   foo = "x";
   foo = "y";
-  // bar = "z" // <- build error
+  foo = "z";
 
   type Bar = {
     [k: number]: number;
@@ -14,6 +14,7 @@ export default () => {
   let bar: keyof Bar;
   //  ^?
   bar = 0;
+  bar = 1;
 
   // typeof
   const stringsEN = {

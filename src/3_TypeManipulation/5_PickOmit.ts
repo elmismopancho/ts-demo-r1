@@ -18,6 +18,7 @@ export default () => {
   //                            ^?
 
   type PostPreview = Pick<Post, "title" | "postedOn">;
+  //   ^?
 
   const postPreview: PostPreview = {
     title: "Lorem Ipsum",

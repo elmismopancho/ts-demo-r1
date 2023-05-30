@@ -45,6 +45,6 @@ export default () => {
       name: "John Doe",
     },
   };
-  // post.title = "";
+  post.title = "";
   post.author.name = ""; //Same as Object.freeze
 };

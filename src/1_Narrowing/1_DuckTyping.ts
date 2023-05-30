@@ -12,7 +12,6 @@ export default () => {
     return { name, age };
   }
   const me = human("Francisco", 38);
-  //         ^?
   console.log(me);
   //          ^?
 
@@ -28,7 +27,6 @@ export default () => {
     };
   }
   const olderMe = birthday(me);
-  //              ^?
   console.log("Birthday", olderMe);
   //                      ^?
 };

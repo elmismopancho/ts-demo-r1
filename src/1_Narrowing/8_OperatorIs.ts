@@ -8,16 +8,6 @@ export default () => {
     meows: () => void;
   };
 
-  // // instanceOf doesn't work on Types
-  // function badCall(animal: unknown) {
-  //   if (animal instanceof Dog) {
-  //     animal.barks();
-  //   }
-  //   if (animal instanceof Cat) {
-  //     animal.meows();
-  //   }
-  // }
-
   function isDog(animal: any): animal is Dog {
     return "barks" in animal;
   }
